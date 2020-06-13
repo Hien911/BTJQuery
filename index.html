@@ -3,8 +3,74 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+<style>
+	div.test {
+		text-align:center;	
+		display:flex;
+	}
+	
+	div.thumb {
+		display:flex;	
+	}
+	
+	div.thumb > div {
+		width:25%;	
+	}
+	
+	div.thumb  img {
+		width:100%;	
+	}
+	
+	div.left {
+		width:60%;
+	}
+	
+	div.left {
+		width:40%;
+	}
+	
+	ul {
+		list-style-type:none;
+	}
+	
+</style>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+	$(document).ready(function(e) {
+		$(".thumb img").click(function() {
+			$("#myImgId").attr("src", $(this).attr("src"));
+		});	
+		
+		$(".category a").click(function() {
+			var path = "images/phone/";
+			if()
+		});
+	});
+</script>
 </head>
 
 <body>
+<div class="test">
+	<div class="left">
+    	<img src="images/phone/p1.png" alt="anh" id="myImgId"/>
+    	<div class="thumb" >
+            <div> <img src="images/phone/p1.png" alt="anh" onClick="doiAnh(this)"/></div>
+            <div> <img src="images/phone/p2.png" alt="anh" onClick="doiAnh(this)"/></div>
+            <div> <img src="images/phone/p3.png" alt="anh" onClick="doiAnh(this)"/></div>
+            <div> <img src="images/phone/p4.png" alt="anh" onClick="doiAnh(this)"/></div>
+    	</div>
+    </div>
+	
+    <div class="right">
+    	<ul class="category">
+        	<li><a href="#">Phone</a></li>
+            <li><a href="#">Tablet</a></li>
+        </ul>
+    	
+    </div>
+</div>
+
+
 </body>
 </html>
